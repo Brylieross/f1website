@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Drivers</title>
+</head>
+<body>
+    <form>
+        <div class="search">
+            <span class="search-icon material-symbols-outlined">search</span>
+            <input class="search-input" type="search" placeholder="Search">
+        </div>
+    </form>
+    <header>
+        <h1>Drivers</h1>
+        <nav>
+            <a href="/search">Search</a>
+            <a href="/">Home</a>
+            <a href="/teams">Teams</a>
+            <a href="/year">Years</a>
+        </nav>
+    </header>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Driver #</th>
+            <th>Championships</th>
+            <th>Country</th>
+            <th>Time Period</th>
+            <th>Current Team</th>
+            <th>Race Wins</th>
+        </tr>
+        {% for name in results %}
+        <tr>
+            <td>{{ name[1] }}</td>
+            <td>{{ name[2] }}</td>
+            <td>{{ name[3] }}</td>
+            <td>{{ name[4] }}</td>
+            <td>{{ name[5] }}</td>
+            <td>{{ name[6] }}</td>
+            <td>{{ name[7] }}</td>
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>
+

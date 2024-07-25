@@ -1,0 +1,100 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    background-image: linear-gradient(to top left, #ffffff, #d8d8d8);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 25px
+}
+
+header{
+    background-color: #333333;
+    background-image: linear-gradient(to top left, #505050, #333333);
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+
+nav a{
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+nav a:hover{
+    color: #99bdc4;
+    font-weight: bold;
+}
+
+h1{
+    color: #ffffff;
+}
+
+h2, h3{
+    color: #333333;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td{
+    border: 1px solid #dddddd;
+}
+
+th, td{
+    padding: 10px;
+    text-align: left;
+}
+
+th{
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+
+.search{
+    --padding: 14px;
+
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: 28px;
+    background: #f9f9f9;
+    transition: background 0.25s;
+}
+
+.search:focus-within{
+    background: #e0e0e0;
+}
+
+.search-input{
+    font-size: 16px;
+    font-family: arial, sans-serif;
+    color: #333333;
+    margin-left: var(--padding);
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 300px;
+}
+
+.search-input::placeholder,
+.search-icon{
+    color: rgba(0, 0, 0, 0.5);
+}
