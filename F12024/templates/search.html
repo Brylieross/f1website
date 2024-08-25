@@ -1,35 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <title>Search</title>
-</head>
-<body>
-    <form>
-        <div class="search">
-            <form action="/search" method="GET">
-                <span class="search-icon material-symbols-outlined">search</span>
-                <input class="search-input" name="query" type="search" placeholder="Search">
-        </form>
-        </div>
-    </form>
+{%extends "layout.html"%}
+{%block content%}
     <header>
-        <h1>Formula 1 Database</h1>
+        <h1>Search Results</h1>
+        <!--Nav buttons-->
         <nav>
             <a href="/">Home</a>
         </nav>
     </header>
     {% if results %}
-        <h2>Results:</h2>
-        <ul>
-        {% for result in results %}
-            <li>{{ result }}</li>
-        {% endfor %}
-        </ul>
+        <!--Data table-->
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Driver #</th>
+                <th>Championships</th>
+                <th>Country</th>
+                <th>Time Period</th>
+                <th>Current Team</th>
+                <th>Race Wins</th>
+            </tr>
+            {% for result in results %}
+            <tr>
+                <td>{{ result[1] }}</td>
+                <td>{{ result[2] }}</td>
+                <td>{{ result[3] }}</td>
+                <td>{{ result[4] }}</td>
+                <td>{{ result[5] }}</td>
+                <td>{{ result[6] }}</td>
+                <td>{{ result[7] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+    <h1>Error! No result found.</h1>
     {% endif %}
-</body>
-</html>
+{%endblock%}

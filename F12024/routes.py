@@ -56,8 +56,8 @@ def year():
     return render_template("year.html", results=results)
 
 
-#Search
-@app.route('/search', methods=['GET'])
+#Search for drivers
+@app.route('/search', methods=['GET', 'POST'])
 def search():
     query = request.args.get('query')
     results = []
