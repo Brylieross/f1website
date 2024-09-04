@@ -74,11 +74,8 @@ details:hover{
 
 table{
     width: 100%;
-    border-collapse: collapse;
+    border-radius: 10px;
     margin: 20px 0;
-}
-
-table, th, td{
     border: 1px solid #000000;
 }
 
@@ -104,7 +101,7 @@ tr:nth-child(even){
     padding: var(--padding);
     border-radius: 28px;
     background: #1b1b1b;
-    transition: background 0.25s;
+    transition: background 0.3s linear;
 }
 
 .search:focus-within{

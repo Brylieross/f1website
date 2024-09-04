@@ -6,6 +6,7 @@ DATABASE = 'F1.db'
 app = Flask(__name__)
 
 
+# Get the database
 def get_db():
     db = getattr(g, '_database', None)
     if db is None:
@@ -13,6 +14,7 @@ def get_db():
         return db
 
 
+# Closes the database when not in use
 @app.teardown_appcontext
 def close_connection(exception):
     db = getattr(g, '_database', None)
