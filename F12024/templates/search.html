@@ -8,9 +8,11 @@
             <a href="/">Home</a>
         </nav>
     </header>
+    <!--If results are recieved-->
     {% if results %}
         <!--Data table-->
         <table>
+            <!--Name of each column-->
             <tr>
                 <th>Name</th>
                 <th>Driver #</th>
@@ -20,6 +22,7 @@
                 <th>Current Team</th>
                 <th>Race Wins</th>
             </tr>
+            <!--Getting the data and displaying it-->
             {% for result in results %}
             <tr>
                 <td>{{ result[1] }}</td>
@@ -32,6 +35,7 @@
             </tr>
             {% endfor %}
         </table>
+    <!--Else display error that nothing was found-->
     {% else %}
     <h1>Error! No result found.</h1>
     <p>Your query doesn't exist or wasn't typed right.</p>

@@ -13,10 +13,12 @@
     <!--Data table-->
     <table>
         <tr>
+            <!--Name of each column-->
             <th>Team Name</th>
             <th>Description</th>
             <th>Time period</th>
         </tr>
+        <!--Getting the data and displaying it-->
         {% for name in results %}
         <tr>
             <td>{{ name[1] }}</td>

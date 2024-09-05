@@ -12,6 +12,7 @@
     </header>
     <!--Data table-->
     <table>
+        <!--Name of each column-->
         <tr>
             <th>Name</th>
             <th>Driver #</th>
@@ -21,6 +22,7 @@
             <th>Current/last Team</th>
             <th>Race Wins</th>
         </tr>
+        <!--Getting the data and displaying it-->
         {% for name in results %}
         <tr>
             <td>{{ name[1] }}</td>

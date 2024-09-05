@@ -12,12 +12,14 @@
     </header>
     <!--Data table-->
     <table>
+        <!--Name of each column-->
         <tr>
             <th>Year</th>
             <th>First</th>
             <th>Second</th>
             <th>Third</th>
         </tr>
+        <!--Getting the data and displaying it-->
         {% for year in results %}
         <tr>
             <td>{{ year[0] }}</td>

@@ -83,6 +83,7 @@ def year():
 def search():
     query = request.args.get('query')
     results = []
+    # If there is a query entered
     if query:
         cursor = get_db().cursor()
         # Selecting the Driver table, selecting every column BUT the last_team column instead selected Teams.name, 
