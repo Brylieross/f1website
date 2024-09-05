@@ -32,6 +32,8 @@ def homepage():
 @app.route("/drivers")
 def drivers():
     cursor = get_db().cursor()
+    # Selecting the Driver table, selecting every column BUT the last_team column instead selected Teams.name, 
+    # then joining Teams with Driver.last_team to display the foreign key in last_team as the actual name
     sql = """SELECT Driver.driver_id, Driver.name, Driver.driver_number, Driver.championships, Driver.country, Driver.time_period, Teams.name, Driver.race_wins
             FROM Driver
             JOIN Teams ON Driver.last_team = Teams.team_id"""
@@ -44,6 +46,7 @@ def drivers():
 @app.route("/teams")
 def teams():
     cursor = get_db().cursor()
+    # Selecting all the data from teams
     sql = "SELECT * FROM Teams"
     cursor.execute(sql)
     results = cursor.fetchall()
@@ -54,12 +57,15 @@ def teams():
 @app.route("/year")
 def year():
     cursor = get_db().cursor()
+    # Selecting year id from year
     sql = "SELECT year_id FROM Year" 
     cursor.execute(sql)
+    # Stores the year_id
     yearnum = len(cursor.fetchall())
     fulldata = []
     for j in range(yearnum):
         i = j+1
+        # Getting all 3 foreign keys from the first, second and third column and making them display the name of that foreign key
         cursor.execute("SELECT year, first, second, third FROM Year WHERE year_id = ?", (i,))
         tempdata = cursor.fetchall()
         cursor.execute("SELECT name FROM Driver WHERE driver_id = ?", (tempdata[0][1],))
@@ -79,6 +85,8 @@ def search():
     results = []
     if query:
         cursor = get_db().cursor()
+        # Selecting the Driver table, selecting every column BUT the last_team column instead selected Teams.name, 
+        # then joining Teams with Driver.last_team to display the foreign key in last_team as the actual name when you search for a driver
         sql = """SELECT Driver.driver_id, Driver.name, Driver.driver_number, Driver.championships, Driver.country, Driver.time_period, Teams.name, Driver.race_wins
                 FROM Driver
                 JOIN Teams ON Driver.last_team = Teams.team_id
