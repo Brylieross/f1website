@@ -1,18 +1,18 @@
-<!--All drivers in the database table page-->
+{# All drivers in the database table page #}
 {%extends "layout.html"%}
 {%block content%}
     <header>
         <h1>Drivers</h1>
+        {# Nav buttons #}
         <nav>
-            <!--Nav buttons-->
             <a href="/">Home</a>
             <a href="/teams">Teams</a>
             <a href="/year">Years</a>
         </nav>
     </header>
-    <!--Data table-->
+    {# Data table #}
     <table>
-        <!--Name of each column-->
+        {# Name of each column #}
         <tr>
             <th>Name</th>
             <th>Driver #</th>
@@ -22,7 +22,7 @@
             <th>Current/last Team</th>
             <th>Race Wins</th>
         </tr>
-        <!--Getting the data and displaying it-->
+        {# Getting the data and displaying it #}
         {% for name in results %}
         <tr>
             <td>{{ name[1] }}</td>

@@ -1,25 +1,25 @@
-<!--All drivers in the database table page-->
+{# All drivers in the database table page #}
 {%extends "layout.html"%}
 {%block content%}
     <header>
         <h1>Years</h1>
-        <!--Nav buttons-->
+        {# Nav buttons #}
         <nav>
             <a href="/">Home</a>
             <a href="/drivers">Drivers</a>
             <a href="/teams">Teams</a>
         </nav>
     </header>
-    <!--Data table-->
+    {# Data table #}
     <table>
-        <!--Name of each column-->
+        {# Name of each column #}
         <tr>
             <th>Year</th>
             <th>First</th>
             <th>Second</th>
             <th>Third</th>
         </tr>
-        <!--Getting the data and displaying it-->
+        {# Getting the data and displaying it #}
         {% for year in results %}
         <tr>
             <td>{{ year[0] }}</td>
