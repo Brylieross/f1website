@@ -25,12 +25,20 @@
         {# Getting the data and displaying it #}
         {% for name in results %}
         <tr>
-            <td>{{ name[1] }}</td>
+            <td>
+                {{ name[1] }}
+                {# Image display #}
+                <details>
+                    <summary>Image</summary>
+                    <img src="{{ name[8] }}" alt="{{ name[8] }}">
+                </details>
+            </td>
             <td>{{ name[2] }}</td>
             <td>{{ name[3] }}</td>
             <td>{{ name[4] }}</td>
             <td>{{ name[5] }}</td>
-            <td>{{ name[6] }}</td>
+            {# Button in name text to take you to that driver #}
+            <td><a href="/teams">{{ name[6] }}</a></td>
             <td>{{ name[7] }}</td>
         </tr>
         {%endfor%}

@@ -23,9 +23,10 @@
         {% for year in results %}
         <tr>
             <td>{{ year[0] }}</td>
-            <td>{{ year[1] }}</td>
-            <td>{{ year[2] }}</td>
-            <td>{{ year[3] }}</td>
+            {# Buttons in name text to take you to that driver #}
+            <td><a href="/search?query={{ year[1] }}">{{ year[1] }}</a></td>
+            <td><a href="/search?query={{ year[2] }}">{{ year[2] }}</a></td>
+            <td><a href="/search?query={{ year[3] }}">{{ year[3] }}</a></td>
         </tr>
         {%endfor%}
     </table>

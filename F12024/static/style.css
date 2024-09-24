@@ -27,7 +27,7 @@ header{
     border-radius: 20px
 }
 
-/* Button */
+/* Nav buttons */
 nav a{
     color: #ffffff;
     margin: 0 15px;
@@ -36,11 +36,24 @@ nav a{
     padding: 10px 20px;
 }
 
-/* Button hover effect */
+
+/* Nav button hover effect */
 nav a:hover{
     color: #99bdc4;
     background-color: #494949;
     border-radius: 20px
+}
+
+/* Data table buttons */
+a{
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+/* Data table button hover effect */
+a:hover{
+    color: #99bdc4;
 }
 
 /* H1 color */
