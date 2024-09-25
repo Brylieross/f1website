@@ -48,7 +48,7 @@ nav a{
 
 /* Nav button hover effect */
 nav a:hover{
-    color: #99bdc4;
+    color: #769da5;;
     background-color: #494949;
     border-radius: 20px
 }
@@ -62,7 +62,7 @@ a{
 
 /* Data table button hover effect */
 a:hover{
-    color: #99bdc4;
+    color: #769da5;
 }
 
 /* H1 color */
@@ -101,7 +101,7 @@ details{
 
 /* Details hover effects */
 details:hover{
-    color: #99bdc4;
+    color: #769da5;;
     cursor: pointer;
     background-color: #494949;
     border-radius: 20px
@@ -141,16 +141,18 @@ tr:nth-child(even){
     padding: var(--padding);
     border-radius: 28px;
     background: #1b1b1b;
-    transition: background 0.3s linear;
+    transition: 0.3s linear;
 }
 
 .search:hover{
     background: #242424;
+    border-radius: 20px;
 }
 
 /* When search bar is being used/is clicked on color */
 .search:focus-within{
     background: #585858;
+    border-radius: 20px;
 }
 
 /* Search bar text styling */

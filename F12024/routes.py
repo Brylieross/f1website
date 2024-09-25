@@ -34,8 +34,8 @@ def drivers():
     cursor = get_db().cursor()
     # Selecting the Driver table, selecting every column BUT the last_team column instead selected Teams.name, 
     # then joining Teams with Driver.last_team to display the foreign key in last_team as the actual name
-    sql = """SELECT Driver.driver_id, Driver.name, Driver.driver_number, Driver.championships, Driver.country, Driver.time_period, Teams.name, Driver.race_wins, Driver.photo
-            FROM Driver
+    sql = """SELECT Driver.driver_id, Driver.name, Driver.driver_number, Driver.championships, Driver.country, 
+            Driver.time_period, Teams.name, Driver.race_wins, Driver.photo FROM Driver
             JOIN Teams ON Driver.last_team = Teams.team_id"""
     cursor.execute(sql)
     results = cursor.fetchall()
@@ -88,8 +88,8 @@ def search():
         cursor = get_db().cursor()
         # Selecting the Driver table, selecting every column BUT the last_team column instead selected Teams.name, 
         # then joining Teams with Driver.last_team to display the foreign key in last_team as the actual name when you search for a driver
-        sql = """SELECT Driver.driver_id, Driver.name, Driver.driver_number, Driver.championships, Driver.country, Driver.time_period, Teams.name, Driver.race_wins, Driver.photo
-                FROM Driver
+        sql = """SELECT Driver.driver_id, Driver.name, Driver.driver_number, Driver.championships, Driver.country, 
+                Driver.time_period, Teams.name, Driver.race_wins, Driver.photo FROM Driver
                 JOIN Teams ON Driver.last_team = Teams.team_id
                 WHERE Driver.name LIKE ?"""
         cursor.execute(sql, ('%' + query + '%',))
