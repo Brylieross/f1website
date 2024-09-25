@@ -99,6 +99,7 @@ details{
 
 /* Details hover effects */
 details:hover{
+    color: #99bdc4;
     cursor: pointer;
     background-color: #494949;
     border-radius: 20px
