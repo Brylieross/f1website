@@ -84,6 +84,14 @@ h3{
     line-height: 22px;
 }
 
+.h3_small{
+    color: #ffffff;
+    font-size: medium;
+    margin: 10px;
+    line-height: 22px;
+    text-decoration: none;
+}
+
 /* P color */
 p{
     color: #ffffff;
@@ -146,13 +154,13 @@ tr:nth-child(even){
 
 .search:hover{
     background: #242424;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 /* When search bar is being used/is clicked on color */
 .search:focus-within{
     background: #585858;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 /* Search bar text styling */
